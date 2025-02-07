@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll(".input")
+const button = document.querySelector('.login_button')
 
 const handlefocus = ({ target }) => {
   const span = target.previousElementSibling
@@ -12,5 +13,18 @@ const handlefocusOut = ({ target }) => {
   }
 }
 
+const handleChange = () => {
+  const [username, password] = inputs;
+  
+  if (username.value && password.value.length >= 8){
+
+    button.removeAttribute('disabled');
+
+  } else {
+    button.setAttribute('disabled', '')
+  }
+}
+
 inputs.forEach((input) => input.addEventListener("focus", handlefocus))
 inputs.forEach((input) => input.addEventListener("focusout", handlefocusOut))
+inputs.forEach((input) => input.addEventListener("input", handleChange))
