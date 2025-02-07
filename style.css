@@ -70,7 +70,6 @@
 .login_label .span-active {
   font-size: 0.7em;
   margin: 8px 10px;
-
 }
 
 .input:focus {
@@ -111,4 +110,38 @@
 
 .login_icons .icons_button:nth-child(3) {
   background-color: var(--black);
+}
+
+.login_label-checkbox {
+  width: 100%;
+  margin: 15px 0 50px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox {
+  appearance: none;
+  /*o appearence none tira todas os estilospresetados do checkbox*/
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-grey);
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.input-checkbox:checked {
+  background-color: var(--red);
+}
+
+.input-checkbox:checked::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: 3px solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin: 2px 6px;
 }
