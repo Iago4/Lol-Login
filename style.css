@@ -77,3 +77,38 @@
   background: var(--whitesmoke);
   border: 2px solid var(--deep-grey);
 }
+
+.login_icons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login_icons img {
+  width: 20px;
+}
+
+.icons_button {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.login_icons .icons_button:nth-child(1) {
+  /*a pseudo-classe :nth-child(1) esta pegando o primeiro botão que é filho da tag login_icons*/
+  background-color: var(--blue);
+}
+
+.login_icons .icons_button:nth-child(2) {
+  background-color: var(--light-grey);
+}
+
+.login_icons .icons_button:nth-child(3) {
+  background-color: var(--black);
+}
